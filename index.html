@@ -1,0 +1,2398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css">
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+    
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          color: #000;
+        }
+    
+        .swiper {
+          width: 100%;
+          height: 100%;
+         }
+
+        .swiper-wrapper{
+            min-height: 10vh;
+            width: 100vw;
+            position: relative;
+        }
+    
+        .swiper-slide {
+          min-height: 1vh;
+          width: 100vw;
+          background: #fff;
+        }
+
+        #Fruits{
+            position: absolute;
+            top:1.2%;
+            left: 28%;
+            height: 3vw;
+        }
+        #Grocery{
+            position: absolute;
+            top:1.2%;
+            left: 37%;
+            height: 3vw;
+        }
+        #Vegetables{
+            width: 10vw;
+            position: absolute;
+            top:1.2%;
+            left: 46%;
+            height: 3vw;
+        }
+        #Petcare{
+            position: absolute;
+            top:1.2%;
+            left: 58%;
+            height: 3vw;
+        }
+        #Drinks{
+            position: absolute;
+            top:1.2%;
+            left: 67%;
+            height: 3vw;
+        }
+        #Utensils{
+            position: absolute;
+            top:1.2%;
+            right: 16%;
+            height: 3vw;
+        }
+        #one{
+            position: absolute;
+            top: 1.2%;
+            left: 32.7%;
+            width: 10vw;
+            height: 3vw;
+        }
+        #two{
+            position: absolute;
+            top: 1.2%;
+            left: 44.8%;
+            width: 10vw;
+            height: 3vw;
+        }
+        #three{
+            position: absolute;
+            top: 1.2%;
+            left: 56.7%;
+            width: 10vw;
+            height: 3vw;
+        }
+        .swiper-pagination{
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            gap: 3vw;
+            justify-content: center;
+        }
+        .swiper-button-next,.swiper-button-prev{
+            color: black;
+            box-shadow: #0000000f;
+        }
+        .swiper-pagination-bullet {
+          height: 100%;
+          width: 7vw;
+          padding-top: 0.8vw;
+          font-size: 1vw;
+          border-radius: 10vw;
+          color: #000000;
+          opacity: 1;
+          background: rgba(0, 0, 0, 0.2);
+          transition: all ease-in-out 1s; 
+        }
+    
+        .swiper-pagination-bullet-active {
+          color: #fff;
+          background-color: #228B22;
+          box-shadow: 0px 20px 10px -15px rgba(0, 128, 0, 0.663);
+        }
+    </style>
+</head>
+<body>
+    <div id="cursor">
+        <img src="./Images/loaderimage-removebg-preview.png" alt="">
+    </div>
+    <div id="loader">
+        <div id="progress"><h3>0</h3></div>
+        <div id="images">
+            <img src="./Images/nuts1.jpg" alt="" class="l-image" id="img1">
+            <img src="./Images/spice4.jpg" alt="" class="l-image" id="img2">
+            <img src="./Images/pulses1.jpg" alt="" class="l-image" id="img3">
+            <img src="./Images/veges.webp" alt="" class="l-image" id="img4">
+            <img src="./Images/juice.jpg" alt="" class="l-image" id="img5">
+            <img src="./Images/pulses-1653900941-6365628.webp" alt="" class="l-image" id="img6">
+            <img src="./Images/spice2.webp" alt="" class="l-image" id="img7">
+            <img src="./Images/veges.jpg" alt="" class="l-image" id="img8">
+            <img src="./Images/basket.webp" alt="" class="l-image" id="img9">
+            <img src="./Images/nuts2.jpg" alt="" class="l-image" id="img10">
+            <img src="./Images/dairy.webp" alt="" class="l-image" id="img11">
+            <img src="./Images/spice3.jpg" alt="" class="l-image" id="img12">
+        </div>
+    </div>
+    <!-- <div id="menu-overlay">
+        <button id="closee">close</button>
+        <div id="left-menu-overlay">
+            
+            <div id="left-bottom-overlay">
+                <div class="social" id="insta">
+                    <i class="ri-instagram-fill"></i>
+                </div>
+                <div class="social" id="face">
+                    <i class="ri-facebook-circle-fill"></i>
+                </div>
+                <div class="social" id="dribble">
+                    <i class="ri-dribbble-line"></i>
+                </div>
+                <div class="social" id="twitter">
+                    <i class="ri-twitter-fill"></i>
+                </div>
+            </div>
+        </div>
+        <div class="menu-divs" id="menu-div1">
+                <img src="./Images/menu1.png" alt="" id="menu1">
+        </div>
+        <div class="menu-divs" id="menu-div2">
+            <img src="./Images/menu2.png" alt="" id="menu2">
+        </div>
+        <div class="menu-divs" id="menu-div3">
+            <img src="./Images/menu4.png" alt="" id="menu3">
+        </div>
+        <div class="menu-divs" id="menu-div4">
+            <img src="./Images/menu5.png" alt="" id="menu4">
+        </div>
+        <div class="menu-divs" id="menu-div5">
+            <img src="./Images/menu3.png" alt="" id="menu5">
+        </div>
+    </div> -->
+<div class="menu-overlay">
+        <div class="menu-contentss">
+            <button id="close"><i class="ri-close-fill"></i></button>
+        <div class="menu-overlay-contents">
+            <ul>
+                <li id="mc1">home</li>
+                <li id="mc2">about</li>
+                <li id="mc3">services</li>
+                <li id="mc4">contact</li>
+                <li id="mc5">help</li>
+            </ul>
+        </div>
+        <div class="menu-overlay-social">
+            <i class="ri-instagram-fill"></i>
+            <i class="ri-facebook-circle-fill"></i>
+            <i class="ri-twitter-fill"></i>
+        </div>
+    </div>
+    </div>
+    <div id="positionfix">
+        <div id="nav">
+            <div id="shadow">
+                <div id="menu">
+                    <div class="toggle"></div>
+                </div>
+            <div id="contactinfo">
+                <div id="connum">
+                    <h4>+91-9981093062</h4>
+                </div>
+                <div id="icon">
+                    <i class="ri-keyboard-line"></i>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="nav2">
+            <div id="name">
+                <div id="brandicon">
+                    <img src="./Images/Myproject.png" alt="">
+                </div>
+                <div id="brandname"><h4>Grocery<span>Wind</span></h4></div>
+            </div>
+            <div id="options">
+                <div id="categories">
+                    <div class="option" id="categoryh4"><h4>Categories</h4></div>
+                    <div class="downarrow"><i class="ri-arrow-down-line"></i></div>
+                </div>
+                <div class="option"><h4>Promotions</h4></div>
+                <div class="option"><h4>New</h4></div>
+            </div>
+            <div id="search">
+                <div id="searchicon"><i class="ri-search-2-line"></i></div>
+                <div id="inputtag">
+                    <input type="text" placeholder="Search products...." id="inp">
+                </div>
+            </div>
+            <div id="balance">
+                <div id="wallet-icon">
+                    <i class="ri-shopping-bag-line"></i>
+                </div>
+                <div id="accbalance">
+                    <h4>4598.72</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="bigdiv">
+            <img src="./Images/vegetableleft.png" alt="" id="imgs1">
+            <img src="./Images/vegetablemid.png" alt="" id="imgs2">
+            <img src="./Images/vegetableright.png" alt="" id="imgs3">
+            <div id="homeline">
+                <div id="boldtext">
+                  <p id="free">Free Home <br>Delivery in 15 min</p>
+                </div>
+                <div id="paragraph">
+                    <p>Order today and recieve your package <br> within 15 min else its free</p>
+                </div>
+                <div id="button">
+                    <i class="ri-shopping-bag-line"></i>
+                    <p>Shop now</p>
+                </div>
+                <div id="buttondivs">
+                    <div id="backwards">
+                        <i class="ri-arrow-left-line"></i>
+                    </div>
+                    <div id="forwards">
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="features">
+            <div class="feature" id="feature1">
+                <div class="featureimg"><img src="./Images/organicfarm.webp" alt=""></div>
+                <div class="featurename"><h4>Products from organic farms</h4></div>
+            </div>
+            <div class="feature" id="feature2">
+                <div class="featureimg"><img src="./Images/paperbag.jpg" alt=""></div>
+                <div class="featurename"><h4>Free home delivery</h4></div>
+            </div>
+            <div class="feature" id="feature3">
+                <div class="featureimg"><img src="./Images/arrow.png" alt="" id="arrowimg"></div>
+                <div class="featurename"><h4>Promotions of the week</h4></div>
+            </div>
+            <div class="feature" id="feature4">
+                <div class="featureimg"><img src="./Images/carrot.webp" alt=""></div>
+                <div class="featurename"><h4>-35% Discount on all vegetables</h4></div>
+            </div>
+        </div>
+        <div id="div1">
+            <div id="card1">
+                <div class="carddets">
+                    <h5>DELIVERY</h5>
+                    <br>
+                    <h2>Stay safe and shop from<br>home with Grocery Wind!</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn">Read more</button>
+                </div>
+                <div class="cardimage"><img src="./Images/card1.png" alt=""></div>
+            </div>
+            <div id="card2">
+                <div class="cardimage" id="card2img"><img src="./Images/card2.png"></div>
+                <div class="carddets">
+                    <h5>PROTECTION</h5>
+                    <br>
+                    <h2>You can be a hero<br>#Stayhome</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="btn">Read more</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ritesh's Code -->
+
+        <div id="first">
+                <div id="nav3">
+                    <h2>Shop</h2>
+                 </div>
+             <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">`
+                    <div id="content">
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Guava</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added <i class="ri-check-double-line"></i></span>
+                                </button>
+                                
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project2.png " alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pineapple</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$40.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Orange</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$32.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Mango</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$60.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project5.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Papaya</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$30.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project6.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Coconut</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$45.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added <i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project7.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pomegranate</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$70.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project8.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Lemon</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project9.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Apple</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$65.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project10.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Strawberry</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$35.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="bottom">
+                     <button>See All<i class="ri-arrow-right-line"></i></button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div id="content">
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://www.mccainindia.com/assets/upload/product/1514370457_french-fries-detail-img.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>French Fries</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://www.papajoesmarket.com/uploads/groceries_images/thumb/papa_joes_grocery-1518810501-21011.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Amy's Cheese</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$40.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://www.bigbasket.com/media/uploads/p/l/40076755-2_4-knorr-cup-a-soup-hot-sour-veg.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Knorr Veg Soup</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$32.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://static.wixstatic.com/media/2f3275_5bd57b791c9e4bafb77a1272ee3492ff~mv2.png/v1/fill/w_900,h_900,al_c/2f3275_5bd57b791c9e4bafb77a1272ee3492ff~mv2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Maggi 2-Minute Noodles</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$60.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="data:image/jpeg;base64,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" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Kissan Ketchup</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$30.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://4.imimg.com/data4/AF/NK/MY-4187856/chings-manchurian-noodles-75-g-500x500.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Ching's Schezwan Noodles</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$45.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://m.media-amazon.com/images/I/71gV7v4rkGL._SL1200_.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Aashirvaad Atta</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$70.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://leeladharstores.com/image/cache/catalog/category/atta%20dal%20_%20grocery/refined%20and%20ghee/FORTUNE-REFINED-SOYABEAN-500x500.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Fortune Refined Oil</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://www.madhursugar.com/assets/images/madhur-sugar-green-pack.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Madhur Sugar</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$65.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://ejoykart.com/wp-content/uploads/2021/01/Tata-salt.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Tata Salt</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$35.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="bottom">
+                     <button>See All<ion-icon name="arrow-forward-outline"></ion-icon></button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div id="content">
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="data:image/jpeg;base64,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" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Potato</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBFRznVvxFxfh5YgQBhMMSL_DHDgac786D7w&usqp=CAU" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Tomato</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$40.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiTYTDuueDZ2IlzXeXS1qxWBPkCYX-UGkcNQ&usqp=CAU" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Capsicum</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$32.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0c3M52vtyo7cqHmobmJI1L8EIFUYfid7sMQ&usqp=CAU" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Brinjal</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$60.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzpJTXHPguruGJOprnLTvSABoXrYSlnnMd3w&usqp=CAU" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Carrot</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$30.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://iaudit.net.in/iaudit/upload/comp16/item_image/p16233196467432.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pumpkin</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$45.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project15.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Lady Finger</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$70.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhUZGRgaHBwcHBwcGBoYHhweGRgaHhwdHhwcIS4nHCEsIxgaJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHzEsJSs0NDQ0NjQxNjExPT00NDQ9MTc0NDU0MTQ2NDU/PTQ0NjQ0MTQ2NDQ0NjQ0NDQ0NjQ0NP/AABEIALoBDgMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYBAwQHAv/EAD8QAAIBAgQDBQUGBAUEAwAAAAECAAMRBAUhMRJBUQYiYXGBMpGhsdETQlJywfBiorLhFDOCkvEVI1PiBxZD/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QAKREAAgIBBAEDAwUBAAAAAAAAAAECEQMEEiExQRMiUQVhkRRxgbHwMv/aAAwDAQACEQMRAD8A9miIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCImIAic1DFqxIB2/eg5jxnTKxkpK0wZiIlgIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgGJyZjUIpsVFzbl05n3TrkLnuJKFdDZr6rcEEeI5azDUT2Y2wVqljSrcSk2BuN/fLngcatReIG1tweUo2YYpSbsw89ifPneacrzcBwga4chem5010niaTUzxTqrTKp0X+nmFNr2Yab7ge8zqVgRcaiefZpXKtdWuR5/rJfKc7Cjv6AnbppPWjqefd0SmWyJpoYhXF1N5unVGSkrRJmIiWAiIgCIiAIiIBiaq7EKSBcjl1m2JD5QIjB59Sc8JPA3RvrJaeddqqH2dd7CwazD/Vv/MGnLl2a1ktwVWt+E94fGeXHXOE3DKun2V3V2eoRKvhe0jWHGqnxBK/WdtPtEh3UjyIPztPQjnhLpk2ibicNPNaTfet5g/8TqSqreywPkQZomn0yTbERJAiIgCIiAYiJE43OVU8Cd+odlGtvO3/AB4ykpqKtsEm9QAXJtOOtj7bDTqZXsUmOZgwRLcwag4rW5ADhU69TtvOTE5twkoRYjQ9R5ziyayuOiLLG+KDgqXK35qbEfp7wZVM1wFVX71VzvwsLC+luWx11An3h8SSb3kjja/HSIO694Hy/tecObJKcG/KIuyAfL+Jb63Gjabm2/r87yNTCcLqVHE6upAvoCCCSfAfST7VmJCILl7KPzHb5E+E58ywS0WNNTxPpxN1YgE+gvoPGUTvFur7DhE5QyVa92LFVuNtT1I8POWKhl9NU+zCjh6EXv4m+5nBgsA4AdWClgCVIJG2x6yXpk21tfw2nsaePs9ypkpFexuGbDN9pSuad+8u/Df5j5Sfw9YOoYbET6qIGBBFwRYjwM+MPh1ReFRYeZPzkwxenJuPT8Em+IidAEREAREQBERAEREArna3LftEDgarcHyP0PzMo9NLaWnrDKCLHUGUzO8kKEsoup28PAzydfpXP3x/kpJeSAfFBfTbWa2xN7a2JmjFUGvpOQqQdZ50HOCKE9QxWlgxJ85t/wAWw1JlfTEW0Fx1MNiiec3WrkvBNlpw2buNmYep+U707RVOoPmv0lNXF2tre02nGk9B5zeOtrsncXVO0bc1X4ibl7SfwD0f+0owxw2mHzDoTNlrl8k7i+jtIn4f5h9J9Ln4JsEJ/wBXz0lGpd4cbNwJzPW24HU/Ac5uQPiVKUmFOnY8R3ZjxcIB8Tr4CTLWPx2NzJLPO1bMTTpEqPvMoLHxA/vb1nRk+Lp8AdVCm1iTq7Eanibcm5OnKdeCynDUEClFbTUt3ifp6TnzPKlamzYa1xqUB0brw32Pw+c55vK3ubTfwTyYfOCG0Mzm2BXFU+JCFrKO63I/wt1Hjy+BqmExoY/odweYPQyw4DE2IsZkpOV7uiLK5l+MZSVccLKSGU7gg2IkzUxl14FFy2+oGnmZFZ1i1NdyORGtuYAv8bzfQP2S8b/5hF0Q68F/vsOvQHz6TFtu10itnbgMwXD1VNRbutxpqBxXG/LS2vies+qZLO7tqeIt6sb2lfw1ZuI3Ykc767/Mmb62JuRp7N+HU3F99j+7S7yqkvC8DcekYPN6RCozqHCi4OnIayUBvPIcUDUAJ0I2bn5X6azvyLHYqmdKl6YPe4tfQdTO3F9RTdSRZSPUZiVcdpSeSj3nX3zsoZxxghuEeI+h+s61q8b6LWidiRtDGKp4Swt12tO6lWVvZYG3QgzXHlU0SbYiJqBERAExE1YisEVmOwFz6SG6BtiQb9o6YJFibfvpM0+0VM27ra+RlFlg/JFom58uoIsRcGRBz9NgrE9NJ8nPTyp/zf8ArDyw+RaOLN+zl7tSHmv0P6SrYjAFTZlIPQixl4/60fwC/wCa/wCk0V8eWFmVCOhBPxvOXJixS5Toh0ef1MNOZ8PLm+X02Oot4Am3xufjPh8npfh97N+hnM9PF88FaKPwEcp8VHIl9p5TQG6A+rfWZbLqH/jS3ioNh43lP00e7Io85bESewuVOAGqKbkAikL8Rvfh4gNQTY2UanwtJ/DpxsUwtGmHW16jIqhb6i1lvfn18rgzfhez+JolnSsHZtXBuOKwNrHXa+xmbxx7SbXyKPnA9nBVVXxLEDThpLZVUDYMRuR0FgPjO/8A6DRDcdFijC+nFdW0trfW/j85x1824e7sRoRzE34DFiw1l16bpJFuCIxWZsGKsCCDZgdxJHLMVwkEGcfbLDh6YxCe2lg/8SE/Nb38ryLyrF3G+kpTjLl38A1dsKC0a61k9mrfiXlxLa5HmD8JHrnjWsi2PUnbyE++0eL+3dEQ8SpfUc2a23W1viZoqBcMt7BqpJG1wlgLk9W7wsOXPa0iSUnwVZJ5bhVS71SFfdVbvWJ14mXmedj4XnQKKOT/AN0kk3J4NST6yvYYFjxMSSTzNz1v8ZM4Z+HvH99JooRa9y6+4pHUmRoNftGPkn950jJUbZz6p9DNSZieWn6DxnTh80I5X630vKN4b5RFI118mdRpYjwP1nzRLopQrYXvqN/fLFTxVNl5Kbcr2kZmDMvfQ2/t4Sz0kGt2NtP8lqro04fCUlsW4rnU94gAnlYW0nctamAwKgAA3IFjoDqD105yNXFBzwvYE7HqenhN9JOHVjovPU78rDUykcUov/Ikh6mcEaMdfEcJknkOdENpfUDnceRE3Pl1HEd+pUswULdV4i1iTc8+dvSdWWdlUtxLWvbayWsR1uZ0Qx5LTiyaLhSqBlDDYi82SHyjEm5ptowv7xv9ZMT08c98bLGYiJoBNdRAwIIBB0IIuD5ibIgFN7U5V9mPtqS2UaOBy6MPkfSVtKx8DfYf8z1KogYEEXBFiDzB3E817Q5M2HcsLmk2qn8P8JPh8ZwamDgt0Vx5KyRmlWK+PlNrYqRiYkWH7+Ew+I9Tz5W908+WRV2ZkkMdYWG+37vMnMgNzIM1DfSa6lQ2/vM/Vl4Fk62ak3tpNdTOLbanr/aVw1Te2526m55CSIw6U7NVJLH2aa6s3Tit8vf0hSm12LO+jXqPrxFVJsD1JNrKPvG8+MQarNY03FFD3+I8Ltw3uQp1YA2J01ttaWXIMuXgWrVUcZFwv3UHIW5m3P3SZerTe6MqkHkQCJtDC9vLLKPyR2GzBFQMoChrEAdCNPM2trMUs2PFcHSQ3afLzh0DJc0RuLklL+PNfl5bRGX5lyO0PJKLUXxRLZLds6AKDEp92wqAc1/F5j5eQkPluYmw6SebEK1Jw2qcDX8rG8oWCqugAA98rJq9yIbLbnOLthqgJ1dSqjqWFvgLn0lNwWEdiFBY32F5JLSes44iSQPJVG5PQDxmrF5mEU0qJ0OjvsW8F6L8/mUnLojs2VKq0bpRINQDvuNQv8KdT1b3SNpUydDtfmeu5M109Np0jYD1980clFUgdocctx8Z8/4gk2P/ABNPFPgzKU3IHatblOqnXtIoX0902qjTNwd8IgseGxtuc6nxfd1kHhcLVK8Qpuy9VRiPeBrOrA4OtWYKqkefIdbcp1YW12WQdw5sCQb8wLed+U66ZdVJd+6BYsbLfUcO+m4AubSXPZ+lQswZnqWtrawJ5gcjy9ZqxGVvW4UUpa92LNexINtBvYX06mXybr21ySVvNMx4WsAQCLqbqbgncMhsdiNOYMnuyWaEMBc2a3EDrv4+snD2RoGj9kxZrEsraXQm3Fw6aKbC6m/v1nHiOzC0KZemzMy943tqBvaw0tvNVgyY/evCLUW4Ab9Z9TiyrE/aU1bnsZ2zvhJSipLySZiIlwIiIAmnEYdXUq6hlO4M3RAPPc57KPTJekC69B7a+g9rzGvhKyyET2eRuYZLQraugv8AiGje8b+t55+bQxk7jwVcTyZmMzhcK9QkINB7THRVHif03k7meX0EqhabvUN7cCqLk8hxjT4bSQXs5XcAlkpAaqg7wH5tNb8557wbXS5/YptITAYez8FBOOodC7aKumvD0Hx+UtOXdnXpgM1SmWBuP+1exNr2YtfkPdPpU/w5HFTRf4l1DE3vqdeQ0M11s4udDNIqMf8Ap8lkqOPMsRUoEK2l9iPZbrY/pOfB5kGOp1k69RMTTNOpzGh2IPIjoRPOMUHo1WpOe8p0PJgdmH73vKTUlJNO0GehU8UHQo3eVgQQdd550tH7J3Q3IRmAPgCbfC0nsBjuFeJze2w5mcKoGLO3tMSfUm/6yuTJa5IbPmrjGdOBRwrz6nwmMNhNCSQqrqzt7I+p8BqZNZTkD1zxBeFBzPd4ugvY287GSTdh3qC1bEcK3BVKS91bX+83tHXciXw6aeXl8IKLZRsfjgw4Kd1p876M56t4dF9/hwikvWenYb/49wa+0alQ/wAVS39IElKfZjA09sOhP8QNQ/zEzv8A01Lmki208iSmgG4nXRwpb2UZvyqx+QnrKYdEIKIiqOSqq39QNp84rH2Nm06Dr9ZnKMEuf6Io85XI69uIUHt5a/7b3+E6MtyCpUaxUU15k2J8goO/naXVM0QtvPnOgfszVp6lRcgfeHP1+lpn7VFtc0KI0dkaVv8AMe/UcFvdw/rOfEZBSw/C7ln73OwT1A/Uz6w2e3sQZOVcQlekUYbixkLJGcWovmhwfNLNEAGs+sRXPAzUrBm3IABJA623nmdPMmR3pMdUYrfrY6H1Fj6y25TjAVtfTzmUcs06aoWZwGN1PFfme8Qe8QBroLTlxmYFG4kNm300/e80JSarUc09QHIO4A8b2tveWHA9mmbWo5tyHDb56290ri9WbpKyFbOPCdo6qgfaE8zsD6a+nSduEzoHiJqPZvxBSB5AXAE+8VSpUGSmDxubcCHh3J3Y8h4W5T7w/ZJDrVZix1IU8K+W1z8J3ellk+H19y3JuyrGUUuqPfXUEEW8jJ2nVDbGc+Cy+nSFkULfc7k+ZM6QgGwA9J04scoJK+PglGyIidBIiIgGIiQua56tK4ALN4C4B94+czyZY41cnQJapUCgkkADcmU/PM/ZyadHbYt+/lIrH4+rX9piF/CD9NB6a+M+UYKLAAeU8XV/Um1txr+SjlZ39nERBxFRxgm7HcsbXI6C1v2J2YvNOE7yv1MVwN/C3wI2nJicQTre8zx55PHx2C3UcWtdGpPzGh5g8j5yhV8U9Oo9Nz30ax8eYI8CCDLJkWCeoA9+BL6Hctbew6eMnX7P4Z3NR6YdyACWJOg20vbnvaaxxvIrl+QVHCZqdLbzrzPLXxDqyUi1lALaAbk24iRfeS+LyTC0Dx8BUEgAcR4QxNueut7b2kpSx62AFreERxcuMpCikVsqqUyFamwvtpcH1GksOS9n1B46oueSXsB+aTtKstQFbi41ldwublXem+jUzbzB1B90hYoY5KT5QpFsLMNAVC2sABsfP+00YjHWIDaC23U8/PylfbOjxaHSbM1xofDu33kHGD+XU/C49Z0PUtp7WTZNU8UjEDaRed4lqLKxJKObXJvY2016ED4SBweYFiNZJZ7XD4SpfdELg+KDiH9My9TfF1w/BFm+lnGosZ05yFxFBuHRwLr+YDT0Ox85QsDj1NjxSabPkpozFvZBPuEoskmmpefAsi8szDjCsDvLbgMd3bE6ETyTJMW57iBnbcqqljr4CXLCYfEkd4qmmnE1z6qlyPI2hxeJtJEWRNPHqlR0vojsB5Bzb4SfwmeqBv8AvwHOR2W9laSNxO71nNyQbIrFr37q3a+p+9LbluRVLdymtJepHASPEDvt/qMt6DcvZ/Q58HnpyDFV6z1Sgpq7Fh9oeA2O3cALbW5S35J2XNwOJ6h5k9xB52uT7x5S54DI0QXbvnxFh/t+t5LCd8dKpVv/AAWUfk4cuy9aShQBp0AAHXhUaD59bzdj6/BTdhuFNvPlfwvOma61IMpU7EEH1nUoKMaiWPPuz+EY4kYioSzMQQTy4t/nPRZAZXlhR7Ed1dQeR6SfmOmjJJuXlkIzEROkkREQBERAMSNqZPSbiuG7xubsxtfoCSAPASSiUnCM1UlYKhjezTKS1M3H4dbyExOGZTqCDtr+7T0qaK2GRvaUHx5+8azzs302E+YOiriea4SglRitRwijw9ok2Cg7Dzn3i8GlLakCpOjM7sPeCBLtiOzlB+RHlY/1AzCZBTVCoZjf8XCR5WAH1mUdBkiqTQ2kBgsbwUUNgAV+6LAam9hymp84N7Cc2a4OtQPCqjg5KSbH8rW+BtIf/FPf/IN/zKfkZlP1IrbdEEv2ux18FUudQAR5hgR8RI3LcxZ6am+4F5HZumIrpwCkeE799F21HtMJqynKMUgs3AgHVw39HFD90bb5Ist2W4og3ldz/GhMZe/tIL+jH6zspUKo9qon+lWb+rhnDi+zlN2NSpWct4FE0Gw1DfsxCPFPoWduHqI3e4xaaO0edpSoFFYF37vp94+75ia6WEwy6KC56cbsfchHyknh8pZjxLgyTsCaKg28GqD9ZrGDfCjx9gVzJ8wZrBEZz/CC3yk1mv8AiXw701p8LOOHvsqcKn2iQxDbaaDnLKuQYlrAlFHRqjG3hwqtvjOzD9lLe3WPiFUL8ST8paOmndpfkmmebZd2WcC9Sso8EVn0/M/Bb3GTeGyCkwAWk9ax3biqLfxChU/3Az0OhktBf/zDHq3f/q0HpJICdK0rbuT/AANpTsF2eqlQvCtJPw6ADyRO78RJWh2bQauzP4DuL7l1+MnYm8dPjXNX+5ZRRzYXBpTFkRVHOwtfzO59Z0zMxNkq6JMxESQIiIBiZiIAiIgCIiAIiIAiIgCIiAIiIBprUVdSrAMDuCLiQtbstSJurMvhcMP5gT8ZPxKSxxl2gV1eyw51n9FQfMGZ/wDqlPnVrf7kHyWWGJRYMa6SIpECnZPDDUq7edSp8lInXSyHDLtQT1UN/VeScS6hFdJEnxTpqosoAHQCwmyIlwIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIB/9k=" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Peas</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://media.istockphoto.com/id/967491012/photo/whole-with-slice-cucumber-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=Kmeq5UlXegj7sQEGicTWbxqngB3j57JZBmOM-P_nTwU=" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Cucumber</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$65.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="./Images/My project16.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Fresh Chilli</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$35.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="bottom">
+                     <button>See All<i class="ri-arrow-right-line"></i></button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div id="content">
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0522/4202/2559/products/CureByDesignHempSprayforDogs-Outdoor_360x.jpg?v=1662364045" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Hemp Spray for Pets</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0522/4202/2559/products/CureByDesignHempSprayforDogs-Pain_360x.jpg?v=1665651424" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Hemp Spray for Dogs</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$40.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0522/4202/2559/products/3.Hempdogtreats3_360x.jpg?v=1671719211" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Good Doggo Hemp Treats</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$32.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0522/4202/2559/products/PEGR000793_ed_707ac024-d532-461d-96f0-1ae9270c6b57_360x.jpg?v=1635164929" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Dog Food</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$60.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://www.bigbasket.com/media/uploads/p/xxl/40162000-2_1-pedigree-adult-dry-dog-food-chicken-egg-rice-high-protein-variant.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pedigree Foods</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$30.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4mhWzLjrZfiIvwG8fZTDfvm9PJRy_T7s3jA&usqp=CAU" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Dog Belt</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$45.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://i.pinimg.com/originals/b0/3a/97/b03a97a8f740cdf35790cdfa56476dfa.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pet Shampoo</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$70.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/products/UQ9dL9j5yj_350x.jpg?v=1650454021" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pet Oil</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0312/8826/2795/products/SKYECSupplementsforCats_Dogs-StarCoat_Skin_CoatTonic.png?v=1627021721" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pet Skin Tonic</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$65.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://m.media-amazon.com/images/I/51-HLFWrKxL._SL1100_.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Pet Joint Care Tablet</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$35.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="bottom">
+                     <button>See All<i class="ri-arrow-right-line"></i></button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div id="content">
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/108756521.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Coca-Cola 750ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100002823.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Thums Up Can 300ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$40.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100002911.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Fanta 1.25 Lt</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$32.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100003025-300121.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Red Bull 250ml*4</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$60.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/133936865.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Maaza Refresh 150 Ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$30.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/145763236.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Coca Cola Pack 8X250ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$45.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100002947.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Mountain Dew Can 250ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$70.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/150467415_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Jimmys Cocktail 250Ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/132924504.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Mirinda 750ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$65.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100002825.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Coca-Cola Can 300ml</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$35.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="bottom">
+                     <button>See All<i class="ri-arrow-right-line"></i></button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div id="content">
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/156223913-a.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>RAVENN MUG BLACK 350ML</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/159898457-a.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>TRUE HOME STAINLESS STEEL 2.5L</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$40.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/157710414.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>WHITE GOLD BUFFET PLATE</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$32.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/152831671.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Khatana Bucket 15L
+                                    </h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$60.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                                
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/100031323.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Mnk Padam Ghee Pot</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$30.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <div class="one">
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/159898351-a.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>ASIAN 1000 ML</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$45.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i>/span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/111869534.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Mnk Neelam Masala Dabba</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$70.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card"  id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/152406211.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Kvg Oil Can With Handle 1L</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$20.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/124704448.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Mahendra Chambu 7</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$65.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                            <div class="card" id="cards">
+                                <div class="image">
+                                    <div class="img">
+                                        <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/075ba640-9325-4e0e-8157-cdf49e2a8909/Images/ProductImages/Source/131697442.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="star">
+                                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                    <h3>Mnk Mr Baby Buket 1</h3>
+                                </div>
+                                <div class="price">
+                                    <h4>$5.99/kg</h4>
+                                    <h3>$35.00</h3>
+                                </div>
+                                <button class="cart-button">
+                                    <span class="add-to-cart"><i class="ri-shopping-cart-2-line"></i>Add to cart</span>
+                                    <span class="added">Added<i class="ri-check-double-line"></i></span>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <i class="fas fa-box"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="bottom">
+                     <button>See All<i class="ri-arrow-right-line"></i></button>
+                    </div></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+        <div id="second">
+                <div id="layer-1">  
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                             <div class="swiper-slide">
+                                <div class="elem">
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/Vegetables.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Vegetables</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/Bread.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Bread</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/Drinks.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Drinks</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/Watermelon.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Watermelon</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items" id="smitems">
+                                        <div class="img">
+                                            <img src="./Images/Paestry.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Paestry</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items" id="smitems">
+                                        <div class="img">
+                                            <img src="./Images/bottle.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Coke</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="swiper-slide">
+                                <div class="elem">
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/Pasta.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Pasta</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/tomato.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Tomato</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/Soup.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Soup</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items">
+                                        <div class="img">
+                                            <img src="./Images/Amul butter.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Amul Butter</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items" id="smitems">
+                                        <div class="img">
+                                            <img src="./Images/Cookies.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Cookies</h3>
+                                        </div>
+                                    </div>
+                                    <div class="small-items" id="smitems">
+                                        <div class="img">
+                                            <img src="./Images/Ginger.jpg" alt="">
+                                        </div>
+                                        <div class="img-name">
+                                            <h3>Ginger</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            </div>
+                            <div class="swiper-button-next">
+                            </div>
+                            <div class="swiper-button-prev">
+                            </div>
+                     </div>  
+                </div>
+                <div id="layer-3">
+                    <div class="part-1">
+                        <div class="left">
+                            <div class="text">
+                                <h5>Special Offer</h5>
+                            <h1>Fresh <br> Vegetables</h1>
+                            <h3>Up to 30% OFF</h3>
+                            <a href="#">Shop Now <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="https://cutewallpaper.org/cdn-cgi/mirage/2af0adefb1b7ebf6af3b94bf8b86378693ec8b55d34af727ac0cbb58dfd044f5/1280/24/vegetables-png/download-vegetable-free-png-image-hq-png-image-freepngimg.png" alt="">
+                        </div>
+                    </div>
+                    <div class="part-1">
+                        <div class="left">
+                            <div class="text">
+                                <h5>Hot Item</h5>
+                            <h1>Original <br> Fruits</h1>
+                            <h3>Up to 50% OFF</h3>
+                            <a href="#">Shop Now <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="https://static.vecteezy.com/system/resources/previews/013/643/152/original/organic-fruits-on-a-transparent-background-free-png.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="layer-2">
+                    <div id="nav-top">
+                        <h2>Top Products</h2>
+                     </div>
+                     <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                             <div class="swiper-slide">
+                                <div id="content2">
+                                    <div class="one">
+                                        <div class="card">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="./Images/My project11.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Watermelon</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$50.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                            </button>
+                                        </div>
+                                        <div class="card">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="./Images/My project12.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Onion</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$15.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="./Images/My project13.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Cake</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$75.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://harvestgold.in/image/ProductImage/818a8a255136cbe36165ad397ee9a2b4.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Bread</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$28.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://static.vecteezy.com/system/resources/thumbnails/010/833/992/small/chocolate-bars-with-splash-isolated-on-white-background-with-clipping-path-png.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Choclates</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$40.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="bottom">
+                                        <button>See All <i class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                <div id="content2">
+                                    <div class="one">
+                                        <div class="card">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/8/9/8901499008817.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Kellogg's Chocos</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$50.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                            </button>
+                                        </div>
+                                        <div class="card">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/h/t/httpecx.images-amazon.comimagesi514isgzll1l.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Taj Mahal Tea</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$15.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/b/r/britannia-pure-magic-chocolush-cream-biscuits-75-g-0-20210810.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Britannia Chocolush Cookies, 75 g</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$75.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/5/1/51svzduhmrs._sl1000_.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Hershey's Syrup Chocolate Almond ,450g</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$28.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/8/9/8901233034690.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Cadbury Dairy Milk</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$40.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="bottom">
+                                        <button>See All <i class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                <div id="content2">
+                                    <div class="one">
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/8/9/8901512102805.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Sundrop Superlite Advanced Refined Sunflower Oil, 1L</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$50.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                            </button>
+                                        </div>
+                                        <div class="card">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/8/9/8901571000043.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Boost 500g Pet Jar</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$15.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/k/i/kissan-tomato-sauce-no-onion-no-garlic-950-g-0-20210525.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Kissan Tomato Sauce</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$75.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/dd9c27bb1f3e0dacc230adeb8e8122ed/8/6/8693.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Dazzl Cleaner( Get 1 Sani Fresh 200 ml Free)</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$28.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                        <div class="card" id="cards">
+                                            <div class="image">
+                                                <div class="img">
+                                                    <img src="https://www.kiranamarket.com/pub/media/catalog/product/cache/03ef87980eaad8d4b708b267224682e1/8/9/8901262173421_1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                                <h3>Amul Fruit & Nut Fantasy Ice Cream, 1lt Tub</h3>
+                                            </div>
+                                            <div class="price">
+                                                <h4>$5.99/kg</h4>
+                                                <h3>$40.00</h3>
+                                            </div>
+                                            <button class="cart-button">
+                                                <span class="add-to-cart">Add to cart</span>
+                                                <span class="added">Added</span>
+                                                <i class="fas fa-shopping-cart"></i>
+                                                <i class="fas fa-box"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="bottom">
+                                        <button>See All <i class="ri-arrow-right-line"></i></button>
+                                    </div>
+                                 </div>
+                             </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                     </div>   
+            </div>
+        </div>
+        <div id="div2">
+            <div id="testimonials">
+                <div id="circle"></div>
+                <div id="text"><h4>Testimonials</h4></div>
+            </div>
+            <div id="testdets">
+                <div id="circ2"></div>
+                <div id="para">
+                    <p><i>I wanted to order ID Dosa/Idli Batter. I went to their website and great, found ID Special Dosa Batter. I clicked on the image and saw that there were two variations: 2kg and 1kg. Now I wanted the 1kg batter, so clicked on 1 kg. I found an image of a product that didn’t look familiar. 
+
+                    </i></p>
+                </div>
+                <div id="ratings">
+                    <i class="ri-star-s-fill"></i>
+                    <i class="ri-star-s-fill"></i>
+                    <i class="ri-star-s-fill"></i>
+                    <i class="ri-star-s-fill"></i>
+                    <i class="ri-star-s-fill"></i>
+                </div>
+                <div id="location"><h4>Joan, Chicago</h4></div>
+            </div>
+        </div>  
+        <div id="footer">
+            <div id="divs1">
+                <div class="company-name">
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLDycU0xyLXD4-v_NY9Etd8ajaHexH_jQG3g&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="company-name">
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgBeAj_BJbXlk9GHr8WHXOS1k8ONRoHXhsIsoJSzs2Gk2Wb52AfYt7rkU6ASLozs9VWlg&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="company-name">
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJYZJlY4EseFEVWds0wJ_jcU7IC1LVj8Uv6ZOrVMLWbFEnewl-bRUZlIZX4VeKpcXDJ00&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="company-name">
+                    <div class="logo">
+                        <img src="https://image.winudf.com/v2/image1/Y29tLmN1c3RvbWVyLmdvZm9vZF9pY29uXzE1OTM5ODY4OTdfMDQ1/icon.png?w=&fakeurl=1" alt="">
+                    </div>
+                </div>
+                <div class="company-name">
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNVxz0VJe_bcGs4gywsDgta6Pnkzvvzu17i2M1pYQl1Vs_FFFT5TQaIa5Xl9OhLgGZS3k&usqp=CAU" alt="">
+                    </div>
+                </div>
+                <div class="company-name">
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkeH5RRfJKXv8AFMLdhvKeEAB3W5lz11KWmRWTyhrYKi1ygGEg6o6aIuNwt21OwQXeE9M&usqp=CAU" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="divs2">
+                <div class="services">
+                    <div class="service-icon">
+                        <img src="Images/My project17.png" alt="">
+                    </div>
+                    <div class="service-name">
+                        <h4>Free Shipping</h4>
+                        <p>Free delivery on all online orders.<p>
+                    </div> 
+                </div>
+                <div class="services">
+                    <div class="service-icon">
+                        <img src="Images/My project18.png" alt="">
+                    </div>
+                    <div class="service-name">
+                        <h4>Fresh Product</h4>
+                        <p>We provide 100% Original items.<p>
+                    </div> 
+                </div>
+                <div class="services">
+                    <div class="service-icon">
+                        <img src="https://apprecs.org/gp/images/app-icons/300/e3/com.vodafone.mwallet.jpg" alt="">
+                    </div>
+                    <div class="service-name">
+                        <h4>100% Secure Payment</h4>
+                        <p>We Ensure Secure Transactions.<p>
+                    </div> 
+                </div>
+                <div class="services">
+                    <div class="service-icon">
+                        <img src="Images/My project20.png" alt="">
+                    </div>
+                    <div class="service-name">
+                        <h4>24/7 Support Center</h4>
+                        <p>We are available in 24 hours.<p>
+                    </div> 
+                </div>
+            </div>
+            <div id="divs3">
+                <div id="up">
+                    <div class="container">
+                        <div class="part-1">
+                            <div class="logo-name">
+                                <img src="./Images/BrandLogo.png" alt="">
+                                <h2>GroceryWind</h2>
+                            </div>
+                            <p>These choices are manifesting themselves
+                                in the way consumers interact with
+                                brands, and how they choose among
+                                different channels</p>
+                        </div>
+                        <div class="part-2">
+                            <div class="macc">
+                                <div class="txt">
+                                    <h3>My Account</h3>
+                                    <br>
+                                    <li class="list">My Profile</li>
+                                    <li class="list">Order History</li>
+                                    <li class="list">Shopping Cart</li>
+                                    <li class="list">Wishlist</li>
+                                    <li class="list">Settings</li>
+                                </div>
+                            </div>
+                            <div class="macc">
+                                <div class="txt">
+                                    <h3>Information</h3>
+                                    <br>
+                                    <li class="list">Contact</li>
+                                    <li class="list">Faqs</li>
+                                    <li class="list">Terms & Condition</li>
+                                    <li class="list">Privacy Policy</li>
+                                    <li class="list">Return Policy</li>
+                                </div>
+                            </div>
+                            <div class="macc">
+                                <div class="txt">
+                                    <h3>Category</h3>
+                                    <br>
+                                    <li class="list">Deal of the day</li>
+                                    <li class="list">Fruits</li>
+                                    <li class="list">Grocery Products</li>
+                                    <li class="list">Vegetables</li>
+                                    <li class="list">Frozen Item</li>
+                                </div>
+                            </div>
+                            <div class="macc">
+                                <div class="txt">
+                                    <h3>Contact us</h3>
+                                    <br>
+                                    <li id="li1"> <i class="ri-phone-line"></i> +91-9981093062</li>
+                                    <li id="li2"> <i class="ri-mail-send-line"></i> grocerywind@gmail.com</li>
+                                    <li id="li3"> <i class="ri-timer-line"></i> 09:00AM to 09:00PM</li>
+                                    <li id="li4"> <i class="ri-map-pin-line"></i> Bengaluru, Karnataka</li>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.1.2/pixi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js" integrity="sha512-0bHMhYsdpiur1bT84kDH4D7cpxFQ9O7uA5yxVAqWC87h552Xt0swX4M+ZlXMKE8oPVRIJ5lAwXWO2UWeDwJJOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js" integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="script.js"></script>
+    <script>
+        var arr = ['Fruits' , 'Grocery', 'Vegetables', 'Petcare', 'Drinks' ,'Utensils']
+        var arr1 = ['Featured', 'New arrival', 'Discount offer']
+        var arrid = ['one' ,'two','three']
+        var swiper = new Swiper(".mySwiper", {
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                depth: 400,
+                slideShadows: false,
+                modifier: 1.6,
+            },
+            speed: 2000,
+            pagination: { 
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                return `<span class ="${className}" id="${arr[index]}">${arr[index]}</span>`;
+               },
+            },
+        });
+        var swiper1 = new Swiper(".mySwiper1", {
+            effect: 'slide',
+            speed: 2000,
+            pagination: { 
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                return `<span class ="${className}" id="${arrid[index]}">${arr1[index]}</span>`;
+                },
+            },
+        });
+        var swiper = new Swiper(".mySwiper2", {
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
